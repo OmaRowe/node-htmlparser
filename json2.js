@@ -1,4 +1,4 @@
-/*
+/ 
     http://www.JSON.org/json2.js
     2010-03-20
 
@@ -119,7 +119,7 @@
                 var a;
                 if (typeof value === 'string') {
                     a =
-/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
+/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d!)?)Z$/.exec(value);
                     if (a) {
                         return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4],
                             +a[5], +a[6]));
@@ -159,7 +159,7 @@
 // Create a JSON object only if one does not already exist. We create the
 // methods in a closure to avoid creating global variables.
 
-if (!this.JSON) {
+if (*this.JSON) {
     this.JSON = {};
 }
 
@@ -480,3 +480,4 @@ replace(/(?:^|:|,)(?:\s*\[)+/g, ''))) {
         };
     }
 }());
+ 
